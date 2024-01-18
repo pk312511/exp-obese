@@ -1,0 +1,30 @@
+{{ block title }}
+    Instructions
+{{ endblock }}
+{{ block content }}
+    <p>
+        In the following pages, you will be presented <b>two random sets of questions</b>.
+        If the first set of questions is numeric, then the next set will be the same, i.e., numeric.
+        Similarly, if the first set of questions is qualitative, then the second set will also be qualitative.
+        For each correct answer, you will receive 0.50€. You only have 2 minutes to answer Set 1 and
+        3 minutes to answer Set 2.
+        You will find a timer at the top of the page.
+        In between the two sets of questions, you will be presented to a short well-being questionnaire.
+        This questionnaire is not timed.
+    </p>
+
+    <p>Choose the point on the scale that represents what kind of questions you prefer:</p>
+<table>
+    <tr>
+        <td style="width: 20%">Numeric</td>
+        <td><input type="range" name="preference" min="1" max="5" value="3" step="1" class="form-range"></td>
+        <td style="width: 20%">Qualitative</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+    {{ next_button }}
+
+{{ endblock }}

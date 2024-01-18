@@ -1,0 +1,100 @@
+{{ block title }}
+
+   Question 7/21
+{{ endblock }}
+{{ block content }}
+
+<div class="progress">
+    <div class="progress-bar" style="width:30%"></div>
+  </div>
+  
+<p>
+
+
+  <div class="row">
+    <div class="col-sm-2">.<img style="width: 395; height: 147px;" src="https://unsplash.com/photos/kkACMU0GYko/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZXVyb3xkZXwwfHx8fDE2OTEzNTQyOTV8MA&force=true" 
+      alt="Cash"></div>
+    <div class="col-sm-10">.  <div class="mt-4 p-5 bg-info text-black rounded">
+      <h1>Your initial wealth is <b>{{player.inivalue.q07}}</b> €.
+         </h1>
+      <p>Your job is to choose which of the hypothetical money
+        amounts is most appealing to you. All choices are unrelated; please do not attempt to plan ahead. Just judge each
+        amount based on what is most appealing to you.</p>
+        
+    <p>
+  You may consider the following options, and you may choose one and continue.
+    <br>
+  If you forget how to play this game, you may click the "Help" button below.
+  </p>
+  <p style="font-size:22px">Which choice appeals you the most?</p>
+<div style="font-size:22px;">
+
+  <b>{{formfields}} </b></div>
+
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+    Submit &raquo;
+  </button>
+  
+  <p>
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Confirmation</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+         By submitting this answer, you will be directed to the next question and will not be able to alter your previous answer.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="otree-btn-next btn btn-success">I confirm</button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  </p>
+  <!-- Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start" id="demo">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Quick instructions</h1>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>The option 1 - immediate payment - means that you could take your money of <b>{{player.inivalue.q01}}</b> € away immediately having no risks. You will then be redirected to your next question.</p>
+      <p>The option 2 - delayed payment - means that you will have the certain amount of money as a later payment -- this payment is always higher than you original plan.</p>
+      <p>The option 3 - probable payment - means that you will go for a lottery that has an observable possibility to raise your payoff -- but when you lose, you lose all things.</p>
+      <p>Please alert that all of your answers are <b>individual</b> and they are not correlated with each other; the order of your trial does not matter as well.</p>
+      <p>Click the icon at the top right to close this help window.</p>
+    </div>
+  </div>
+  
+  <!-- Button to open the offcanvas sidebar -->
+  <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+    Help
+  </button>
+    </div></div>
+  </div>
+
+
+
+
+
+<br><br>
+
+
+
+
+
+</div>
+
+
+{{ endblock }}

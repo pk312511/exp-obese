@@ -1,0 +1,106 @@
+{{ block content }}
+
+  <p>
+    <div class="alert alert-warning">
+      <div class="spinner-border spinner-border-sm"></div> <strong>You have completed all questions.</strong> You are now reaching the ending page of this experiment.
+    </div>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Thank you</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Thank you for your participation!</h1>
+          <h2>Your experiment is complete now and all of your responses are recorded.</h2>
+          <p>Now, you may stand up and leave the room. The experiment conductor will provide you the €2.5 then.</p>
+          <p>If you have any question, please contact xiaoyi.guo@stud.uni-heidelberg.de.</p>
+          <h2>What does this experiment conclude?</h2>
+          <p>Individually, the experiment calculates that you, with a BMI status of <b>{{player.status}}</b> average discounting rate is: </p>
+          <div style="font-size:35px" class="text-primary d-flex justify-content-center">{{player.discounting}} </div>
+          
+          <p>
+        </p>
+        </div>
+   
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    What does it mean?
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">An easy interpretation to this value</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <p> Probability/delay discounting refers to the decrease in 
+                the subjective value of a reward as a function of a decreasing likelihood of its receipt.
+                Thus, rewarding outcomes with shorter delays until their receipt and those with a greater 
+                likelihood of receipt tend to have a higher subjective value than those associated with 
+                longer delays or a lower likelihood. </p>
+            <p>In this experiment, we calculate it via the exponential approach. 
+                Exponential discounting, a cornerstone of behavioral economics, unveils why we often prioritize <b>immediate rewards over future gains</b>. 
+                It encapsulates the notion that money's value diminishes over time, making a dollar today more attractive than a dollar tomorrow. 
+                This phenomenon holds insights into decision-making dynamics, influencing choices about spending, saving, and more. 
+                The model introduces a discount factor that quantifies our inclination toward impulsivity or patience. 
+                <b>People with higher discount factors (yours: {{player.discounting}}) lean towards immediate gratification</b> , 
+                while <b>those with lower factors exhibit patience</b> . 
+                While exponential discounting aids in explaining our trade-offs between now and later, it also sparks discussions about the complexities of human decision-making, underscoring the delicate balance between short-term desires and long-term goals.</p>
+        </div>
+  
+    
+      </div>
+    </div>
+  </div>
+      </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+        <p>&copy; Xiaoyi Guo 2023</p>
+        <p>Reference:</p>
+        <p>Bickel, W.K., Wilson, A.G., Franck, C.T., Mueller, E.T., Jarmolowicz, D.P., Koffarnus, M.N. and Fede, S.J., 2014. Using crowdsourcing to compare temporal, social temporal, and probability discounting among obese and non-obese individuals. Appetite, 75, pp.82-89.</p>
+        <p>Bickel, W.K., Jarmolowicz, D.P., Mueller, E.T., Franck, C.T., Carrin, C. and Gatchalian, K., 2012. Altruism in time: social temporal discounting differentiates smokers from problem drinkers. Psychopharmacology, 224, pp.109-120.</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+    {{ formfields }}
+
+
+{{ endblock }}
