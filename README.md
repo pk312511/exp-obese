@@ -31,3 +31,6 @@ This project only contains the methodology and the design codes for this experim
 
 ## References
 Bickel, W.K., Wilson, A.G., Franck, C.T., Mueller, E.T., Jarmolowicz, D.P., Koffarnus, M.N. and Fede, S.J., 2014. Using crowdsourcing to compare temporal, social temporal, and probability discounting among obese and non-obese individuals. *Appetite, 75*, pp.82-89.
+
+## Theoretical Background and Intuition
+Please see the file in the main branch `Report.pdf` for further information. This file introduces the procedures and theoretical backgrounds of the experiment.
